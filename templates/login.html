@@ -1,0 +1,17 @@
+<form class="login_form">
+    <p class="head_form">{{checked?'Sign In':'Registration'}}</p>
+
+    <input type="checkbox" id="marker" ng-model="checked" ng-init="checked=true">
+    <label id="toggle" for="marker"></label>
+    
+    <label for="userLogin">Login:</label>
+    <input type="text" id="userLogin" ng-model="userName" autofocus required>
+    <label for="userPassword">Password:</label>
+    <input type="password" id="userPassword" ng-model="userPass" required>
+    <input type="submit" class="btn green" ng-click="entry(userName, userPass, checked)" value="{{checked?'Sign In':'Registration'}}">
+
+    <div ng-if="warn" class="warn">
+        <p>Sorry, {{checked?'sign in':'registration'}} failed</p>
+        <p>{{warn}}</p>
+    </div>
+</form>

@@ -1,0 +1,48 @@
+<form class="search-form">
+    <input type="text" ng-model="search" placeholder="Search...">
+</form>
+
+<article class="products">
+    <section class="product" ng-repeat="(key, product) in prod | filter: search">
+        <a href="#/products/{{key}}">
+            <h3>{{product.title}}</h3>
+            <img ng-src="http://smktesting.herokuapp.com/static/{{product.img}}" alt="{{product.img}}">
+        </a>
+    </section>
+    <section class="product" ng-repeat="(key, product) in prod | filter: search">
+        <a href="#/products/{{key}}">
+            <h3>{{product.title}}</h3>
+            <img ng-src="http://smktesting.herokuapp.com/static/{{product.img}}" alt="{{product.img}}">
+        </a>
+    </section>
+    <section class="product" ng-repeat="(key, product) in prod | filter: search">
+        <a href="#/products/{{key}}">
+            <h3>{{product.title}}</h3>
+            <img ng-src="http://smktesting.herokuapp.com/static/{{product.img}}" alt="{{product.img}}">
+        </a>
+    </section>
+    <section class="product" ng-repeat="(key, product) in prod | filter: search">
+        <a href="#/products/{{key}}">
+            <h3>{{product.title}}</h3>
+            <img ng-src="http://smktesting.herokuapp.com/static/{{product.img}}" alt="{{product.img}}">
+        </a>
+    </section>
+    <section class="product" ng-repeat="(key, product) in prod | filter: search">
+        <a href="#/products/{{key}}">
+            <h3>{{product.title}}</h3>
+            <img ng-src="http://smktesting.herokuapp.com/static/{{product.img}}" alt="{{product.img}}">
+        </a>
+    </section>
+    <section class="product" ng-repeat="(key, product) in prod | filter: search">
+        <a href="#/products/{{key}}">
+            <h3>{{product.title}}</h3>
+            <img ng-src="http://smktesting.herokuapp.com/static/{{product.img}}" alt="{{product.img}}">
+        </a>
+    </section>
+    <section class="product" ng-repeat="(key, product) in prod | filter: search">
+        <a href="#/products/{{key}}">
+            <h3>{{product.title}}</h3>
+            <img ng-src="http://smktesting.herokuapp.com/static/{{product.img}}" alt="{{product.img}}">
+        </a>
+    </section>
+</article>

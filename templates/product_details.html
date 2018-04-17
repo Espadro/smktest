@@ -1,0 +1,44 @@
+<article class="prod_details">
+    <section class="info">
+        <p class="title"><strong>{{product.title}}</strong></p>
+        <img ng-src="http://smktesting.herokuapp.com/static/{{product.img}}" alt="{{product.img}}">
+        <p>{{product.text}}</p>
+    </section>
+
+    <section class="comments">
+        <form class="send_comment" ng-controller="CommentCtrl">
+            <h3>Comment</h3>
+            <div id="stars">
+                <input type="radio" ng-model="rate" name="rate" id="star5" value="5">
+                <label for="star5"></label>
+
+                <input type="radio" ng-model="rate" name="rate" id="star4" value="4">
+                <label for="star4"></label>
+
+                <input type="radio" ng-model="rate" name="rate" id="star3" value="3">
+                <label for="star3"></label>
+
+                <input type="radio" ng-model="rate" name="rate" id="star2" value="2">
+                <label for="star2"></label>
+
+                <input type="radio" ng-model="rate" name="rate" id="star1" value="1">
+                <label for="star1"></label>
+            </div>
+            <textarea ng-model="text" cols="30" rows="7" required></textarea>
+            <input type="submit" class="btn_green" ng-click="comment(rate, text, product.id)" value="Send">
+
+            <div ng-if="warn" class="warn">
+                <p>{{warn}}</p>
+            </div>
+        </form>
+
+        <section ng-repeat="review in product.reviews">
+            <p class="comment_info">
+                <span ng-repeat="info in review">{{info.username}}</span>
+                <span>at {{review.created_at}}</span>
+            </p>
+            <p>Rate: {{review.rate}}</p>
+            <p>Comment: {{review.text}}</p>
+        </section>
+    </section>
+</article>
